@@ -17,3 +17,7 @@ We already have some ideas for some parts but not all of them.
 
 ### Data display
  - Cesium
+ - [Terrain rendering](https://github.com/topics/terrain-rendering)
+
+## Misc
+ - [3D terrain rendering based on elevation map for game design](https://www.programmersought.com/article/33254272778/)
