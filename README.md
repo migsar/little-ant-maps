@@ -12,3 +12,4 @@ First, we feel elevation data should be 3D or easily translatable to 3D.
 ## User cases
 - Walking users
 - Cycling users
+- Reduced mobility
