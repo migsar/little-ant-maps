@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+	<title>spike MaplibreGl</title>
+	
+	<script type="module">
+		import { Map, GeolocateControl, NavigationControl, ScaleControl } from 'https://cdn.skypack.dev/maplibre-gl'
+
+		const mapTilerKey = "get_your_own_OpIi9ZULNHzrESv6T2vL"
+		// at https://cloud.maptiler.com/account/keys/
+		const map = new Map({
+			container: "map",
+			style: `https://api.maptiler.com/maps/hybrid/style.json?key=${mapTilerKey}`,
+			center: [-1.914610, 43.078789],
+			zoom: 9
+		})
+
+		var nav = new NavigationControl();
+		map.addControl(nav, 'top-left');
+
+		var scale = new ScaleControl();
+		map.addControl(scale, 'bottom-left');
+
+		map.addControl(
+			new GeolocateControl({
+				positionOptions: {
+					enableHighAccuracy: true
+				},
+			}),
+		'top-left')
+
+		map.on('load', function () {
+			map.addSource('wms-test-source', {
+			'type': 'raster',
+			'tiles': [
+				'https://idena.navarra.es/ogc/wmts/mapabase/default/epsg25830/{TileMatrix}/{TileRow}/{TileCol}.png'
+			],
+			'tileSize': 256
+			});
+
+			map.addLayer({
+				'id': 'base',
+				'type': 'raster',
+				'source': 'wms-test-source',
+				'paint': {}
+				},
+				'mapabase'
+			);
+		});
+	</script>
+
+</head>
+<body>
+
+	<div id="map"></div>
+	<link rel="stylesheet" href="https://cdn.skypack.dev/maplibre-gl/dist/maplibre-gl.css" />
+	<style>
+		#map {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+		  }
+	</style>
+</body>
+</html>
