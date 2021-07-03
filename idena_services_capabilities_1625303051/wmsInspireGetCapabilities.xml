@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?><WMS_Capabilities xmlns:inspire_vs="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0" xmlns:inspire_common="http://inspire.ec.europa.eu/schemas/common/1.0" version="1.3.0" updateSequence="7686" xmlns="http://www.opengis.net/wms" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wms https://inspire.navarra.es/services/schemas/wms/1.3.0/capabilities_1_3_0.xsd http://inspire.ec.europa.eu/schemas/inspire_vs/1.0 http://inspire.ec.europa.eu/schemas/inspire_vs/1.0/inspire_vs.xsd">
+  <Service>
+    <Name>WMS</Name>
+    <Title>WMS cadastral parcels INSPIRE of IDENA (Spatial Data Infrastructure of Navarra)</Title>
+    <Abstract>WMS service including INSPIRE compliant datasets, published by the Government of Navarra (Spain).</Abstract>
+    <KeywordList>
+      <Keyword>WMS</Keyword>
+      <Keyword>GEOSERVER</Keyword>
+      <Keyword>Navarra</Keyword>
+      <Keyword>IDENA</Keyword>
+      <Keyword>SITNA</Keyword>
+      <Keyword>Cadastral parcel</Keyword>
+    </KeywordList>
+    <OnlineResource xlink:type="simple" xlink:href="http://idena.navarra.es"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson>SITNA</ContactPerson>
+        <ContactOrganization>Nafarroako Gobernua / Gobierno de Navarra</ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition>pointOfContact</ContactPosition>
+      <ContactAddress>
+        <AddressType>postal</AddressType>
+        <Address>Calle Cabárceno 6</Address>
+        <City>Sarriguren</City>
+        <StateOrProvince>Navarra</StateOrProvince>
+        <PostCode>31621</PostCode>
+        <Country>Spain</Country>
+      </ContactAddress>
+      <ContactVoiceTelephone>+34 848 426 282</ContactVoiceTelephone>
+      <ContactFacsimileTelephone>+34 848 429 738</ContactFacsimileTelephone>
+      <ContactElectronicMailAddress>sitna@navarra.es</ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees>no conditions apply</Fees>
+    <AccessConstraints>ES: Creative Commons Reconocimiento (CC BY 4.0) [http://creativecommons.org/licenses/by/4.0/deed.es_ES] EN: Creative Commons Attribution (CC BY 4.0) [http://creativecommons.org/licenses/by/4.0/deed.en_EN]. Será necesario nombrar la fuente de procedencia de la información de la manera siguiente: "Servicio proporcionado por el Gobierno de Navarra." El servicio se suministra “tal cual”, sin garantía de ningún tipo, implícita o explícita y sus imágenes son sólo de propósito demostrativo.</AccessConstraints>
+    <MaxWidth>4096</MaxWidth>
+    <MaxHeight>4096</MaxHeight>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://inspire.navarra.es/services/CP/ows?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xlink:type="simple" xlink:href="https://inspire.navarra.es/services/CP/ows?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/png</Format>
+        <Format>application/atom+xml</Format>
+        <Format>application/json;type=utfgrid</Format>
+        <Format>application/pdf</Format>
+        <Format>application/rss+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml;mode=networklink</Format>
+        <Format>application/vnd.google-earth.kmz</Format>
+        <Format>image/geotiff</Format>
+        <Format>image/geotiff8</Format>
+        <Format>image/gif</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/svg+xml</Format>
+        <Format>image/tiff</Format>
+        <Format>image/tiff8</Format>
+        <Format>image/vnd.jpeg-png</Format>
+        <Format>text/html; subtype=openlayers</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://inspire.navarra.es/services/CP/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>text/plain</Format>
+        <Format>application/vnd.ogc.gml/3.1.1</Format>
+        <Format>text/xml; subtype=gml/3.1.1</Format>
+        <Format>text/html</Format>
+        <Format>application/json</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://inspire.navarra.es/services/CP/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+    </Request>
+    <Exception>
+      <Format>XML</Format>
+      <Format>INIMAGE</Format>
+      <Format>BLANK</Format>
+      <Format>JSON</Format>
+    </Exception>
+    <inspire_vs:ExtendedCapabilities>
+      <inspire_common:ResourceLocator>
+  
+  
+<inspire_common:URL>http://www.idee.es/csw-codsi-idee/srv/spa/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;ElementSetName=full&amp;ID=engSITNAINSPIRE_WMS_ES_RRTN_CP</inspire_common:URL>
+        <inspire_common:MediaType>application/vnd.ogc.csw.GetRecordByIdResponse_xml</inspire_common:MediaType>
+      </inspire_common:ResourceLocator>
+      <inspire_common:ResourceType>service</inspire_common:ResourceType>
+      <inspire_common:TemporalReference>
+  
+<inspire_common:DateOfLastRevision>2016-12-28</inspire_common:DateOfLastRevision>
+      </inspire_common:TemporalReference>
+      <inspire_common:Conformity>
+  
+  
+<inspire_common:Specification>
+    
+    
+  <inspire_common:Title>Technical Guidance for INSPIRE View Services 3.11</inspire_common:Title>
+          <inspire_common:DateOfLastRevision>2013-04-04</inspire_common:DateOfLastRevision>
+        </inspire_common:Specification>
+        <inspire_common:Degree>notEvaluated</inspire_common:Degree>
+      </inspire_common:Conformity>
+      <inspire_common:MetadataPointOfContact>
+  
+  
+<inspire_common:OrganisationName>IDENA</inspire_common:OrganisationName>
+        <inspire_common:EmailAddress>idena@navarra.es</inspire_common:EmailAddress>
+      </inspire_common:MetadataPointOfContact>
+      <inspire_common:MetadataDate>2016-12-28</inspire_common:MetadataDate>
+      <inspire_common:SpatialDataServiceType>view</inspire_common:SpatialDataServiceType>
+      <inspire_common:MandatoryKeyword>
+  
+<inspire_common:KeywordValue>infoMapAccessService</inspire_common:KeywordValue>
+      </inspire_common:MandatoryKeyword>
+      <inspire_common:SupportedLanguages>
+  
+<inspire_common:DefaultLanguage>
+    
+  <inspire_common:Language>spa</inspire_common:Language>
+        </inspire_common:DefaultLanguage>
+      </inspire_common:SupportedLanguages>
+      <inspire_common:ResponseLanguage>
+  
+<inspire_common:Language>spa</inspire_common:Language>
+      </inspire_common:ResponseLanguage>
+    </inspire_vs:ExtendedCapabilities>
+    <Layer>
+      <Title>WMS cadastral parcels INSPIRE of IDENA (Spatial Data Infrastructure of Navarra)</Title>
+      <Abstract>WMS service including INSPIRE compliant datasets, published by the Government of Navarra (Spain).</Abstract>
+      <!--Limited list of EPSG projections:-->
+      <CRS>EPSG:23028</CRS>
+      <CRS>EPSG:23029</CRS>
+      <CRS>EPSG:23030</CRS>
+      <CRS>EPSG:23031</CRS>
+      <CRS>EPSG:25828</CRS>
+      <CRS>EPSG:25829</CRS>
+      <CRS>EPSG:25830</CRS>
+      <CRS>EPSG:25831</CRS>
+      <CRS>EPSG:3035</CRS>
+      <CRS>EPSG:3038</CRS>
+      <CRS>EPSG:3039</CRS>
+      <CRS>EPSG:3040</CRS>
+      <CRS>EPSG:3041</CRS>
+      <CRS>EPSG:3042</CRS>
+      <CRS>EPSG:3043</CRS>
+      <CRS>EPSG:3044</CRS>
+      <CRS>EPSG:3045</CRS>
+      <CRS>EPSG:3046</CRS>
+      <CRS>EPSG:3047</CRS>
+      <CRS>EPSG:32628</CRS>
+      <CRS>EPSG:32629</CRS>
+      <CRS>EPSG:32630</CRS>
+      <CRS>EPSG:32631</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>EPSG:4230</CRS>
+      <CRS>EPSG:4258</CRS>
+      <CRS>EPSG:4326</CRS>
+      <CRS>EPSG:900913</CRS>
+      <CRS>CRS:84</CRS>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>-2.5045396130002864</westBoundLongitude>
+        <eastBoundLongitude>-0.7121440958587221</eastBoundLongitude>
+        <southBoundLatitude>41.89725642041421</southBoundLatitude>
+        <northBoundLatitude>43.32127224919683</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox CRS="CRS:84" minx="-2.5045396130002864" miny="41.89725642041421" maxx="-0.7121440958587221" maxy="43.32127224919683"/>
+      <BoundingBox CRS="EPSG:23028" minx="1513720.0453435231" miny="4714776.353004494" maxx="1686564.8699687899" maxy="4896954.313337567"/>
+      <BoundingBox CRS="EPSG:23029" minx="1026848.8779622146" miny="4659032.569724684" maxx="1187857.7200479633" maxy="4830184.706624536"/>
+      <BoundingBox CRS="EPSG:23030" minx="540274.8458226634" miny="4638696.550605031" maxx="689887.7621303456" maxy="4799244.708538718"/>
+      <BoundingBox CRS="EPSG:23031" minx="43405.94103668217" miny="4645238.105622019" maxx="199086.98036831693" maxy="4811430.575259785"/>
+      <BoundingBox CRS="EPSG:25828" minx="1513591.337656639" miny="4714549.160759507" maxx="1686433.9086952067" maxy="4896724.820531375"/>
+      <BoundingBox CRS="EPSG:25829" minx="1026733.6097259695" miny="4658815.424497529" maxx="1187740.7002443695" maxy="4829965.738681823"/>
+      <BoundingBox CRS="EPSG:25830" minx="540173.1477690564" miny="4638487.493891628" maxx="689784.8168951604" maxy="4799034.318232125"/>
+      <BoundingBox CRS="EPSG:25831" minx="43318.04480705754" miny="4645035.6251800945" maxx="198997.84433850506" maxy="4811226.79528831"/>
+      <BoundingBox CRS="EPSG:32628" minx="1513591.337648728" miny="4714549.160875289" maxx="1686433.908686396" maxy="4896724.820648567"/>
+      <BoundingBox CRS="EPSG:32629" minx="1026733.6097218851" miny="4658815.424613746" maxx="1187740.7002393068" maxy="4829965.73879957"/>
+      <BoundingBox CRS="EPSG:32630" minx="540173.1477687457" miny="4638487.494007996" maxx="689784.8168937694" maxy="4799034.318350116"/>
+      <BoundingBox CRS="EPSG:32631" minx="43318.04481041053" miny="4645035.625296414" maxx="198997.84434083512" maxy="4811226.795406206"/>
+      <BoundingBox CRS="EPSG:3035" minx="2151451.904397339" miny="3284873.288814816" maxx="2330433.622933291" maxy="3453086.1138707246"/>
+      <BoundingBox CRS="EPSG:3857" minx="-278804.0743907743" miny="5145601.357390902" maxx="-79275.51812242913" maxy="5361001.312399547"/>
+      <BoundingBox CRS="EPSG:4230" minx="41.898376273148145" miny="-2.50332720536419" maxx="43.32237867095337" maxy="-0.7109403442478573"/>
+      <BoundingBox CRS="EPSG:4326" minx="41.89725642041421" miny="-2.5045396130002864" maxx="43.32127224919683" maxy="-0.7121440958587221"/>
+      <BoundingBox CRS="EPSG:4258" minx="41.89725642041421" miny="-2.5045396130002864" maxx="43.32127224919683" maxy="-0.7121440958587221"/>
+      <BoundingBox CRS="EPSG:900913" minx="-278804.0743907743" miny="5145601.357390902" maxx="-79275.51812242913" maxy="5361001.312399547"/>
+      <BoundingBox CRS="EPSG:3038" minx="4938889.09469638" miny="2488124.9825458927" maxx="5144970.216611568" maxy="2686665.4806553815"/>
+      <BoundingBox CRS="EPSG:3039" minx="4807119.398019105" miny="2000826.1334203773" maxx="5000906.530357635" maxy="2186136.2165011102"/>
+      <BoundingBox CRS="EPSG:3040" minx="4714549.160759507" miny="1513591.337656639" maxx="4896724.820531375" maxy="1686433.9086952067"/>
+      <BoundingBox CRS="EPSG:3041" minx="4658815.424497529" miny="1026733.6097259695" maxx="4829965.738681823" maxy="1187740.7002443695"/>
+      <BoundingBox CRS="EPSG:3042" minx="4638487.493891628" miny="540173.1477690564" maxx="4799034.318232125" maxy="689784.8168951604"/>
+      <BoundingBox CRS="EPSG:3043" minx="4645035.6251800945" miny="43318.04480705754" maxx="4811226.79528831" maxy="198997.84433850506"/>
+      <BoundingBox CRS="EPSG:3044" minx="4684222.71674667" miny="-454980.1554905145" maxx="4861219.56650518" maxy="-287696.1012631203"/>
+      <BoundingBox CRS="EPSG:3045" minx="4759468.441539434" miny="-954204.0064066816" maxx="4947788.348234393" maxy="-774765.9680652549"/>
+      <BoundingBox CRS="EPSG:3046" minx="4872699.6502104085" miny="-1454411.1430614346" maxx="5072990.099302605" maxy="-1262108.2624929224"/>
+      <BoundingBox CRS="EPSG:3047" minx="5026791.406615355" miny="-1955070.8494393504" maxx="5239750.619090023" maxy="-1749102.099334857"/>
+      <AuthorityURL name="IDENA_WMS">
+        <OnlineResource xlink:type="simple" xlink:href="http://idena.navarra.es"/>
+      </AuthorityURL>
+      <Identifier authority="IDENA_WMS">idena_wms_full</Identifier>
+      <Layer queryable="1" opaque="0">
+        <Name>CP:CadastralParcel</Name>
+        <Title>Cadastral parcels</Title>
+        <Abstract>Navarra Provincial Council Cadastral Parcels according INSPIRE specifications</Abstract>
+        <KeywordList>
+          <Keyword>CadastralParcels</Keyword>
+          <Keyword>Parcelas Catastrales</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4258</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-2.5045396130002864</westBoundLongitude>
+          <eastBoundLongitude>-0.7121440958587221</eastBoundLongitude>
+          <southBoundLatitude>41.89725642041421</southBoundLatitude>
+          <northBoundLatitude>43.32127224919683</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-2.5045396130002864" miny="41.89725642041421" maxx="-0.7121440958587221" maxy="43.32127224919683"/>
+        <BoundingBox CRS="EPSG:4258" minx="41.89725642041421" miny="-2.5045396130002864" maxx="43.32127224919683" maxy="-0.7121440958587221"/>
+        <BoundingBox CRS="EPSG:23028" minx="1513720.0282878082" miny="4714776.342310498" maxx="1686564.8528725775" maxy="4896954.302593304"/>
+        <BoundingBox CRS="EPSG:23029" minx="1026848.8603296796" miny="4659032.560356719" maxx="1187857.7024360588" maxy="4830184.697267265"/>
+        <BoundingBox CRS="EPSG:23030" minx="540274.8276205474" miny="4638696.542519729" maxx="689887.7440059098" maxy="4799244.700522082"/>
+        <BoundingBox CRS="EPSG:23031" minx="43405.92234960629" miny="4645238.098902704" maxx="199086.96161876235" maxy="4811430.5684844535"/>
+        <BoundingBox CRS="EPSG:25828" minx="1513591.337656639" miny="4714549.160759507" maxx="1686433.9086952067" maxy="4896724.820531375"/>
+        <BoundingBox CRS="EPSG:25829" minx="1026733.6097259695" miny="4658815.424497529" maxx="1187740.7002443695" maxy="4829965.738681823"/>
+        <BoundingBox CRS="EPSG:25830" minx="540173.1477690564" miny="4638487.493891628" maxx="689784.8168951604" maxy="4799034.318232125"/>
+        <BoundingBox CRS="EPSG:25831" minx="43318.04480705754" miny="4645035.6251800945" maxx="198997.84433850506" maxy="4811226.79528831"/>
+        <BoundingBox CRS="EPSG:32628" minx="1513591.3369604615" miny="4714549.165347784" maxx="1686433.9079251988" maxy="4896724.825175974"/>
+        <BoundingBox CRS="EPSG:32629" minx="1026733.6093685834" miny="4658815.429078806" maxx="1187740.6998047633" maxy="4829965.743323261"/>
+        <BoundingBox CRS="EPSG:32630" minx="540173.147741922" miny="4638487.498470001" maxx="689784.816774714" maxy="4799034.322871405"/>
+        <BoundingBox CRS="EPSG:32631" minx="43318.04509771004" miny="4645035.629759423" maxx="198997.84454211005" maxy="4811226.799928493"/>
+        <BoundingBox CRS="EPSG:3035" minx="2151451.9043973386" miny="3284873.288814816" maxx="2330433.6229332904" maxy="3453086.1138707246"/>
+        <BoundingBox CRS="EPSG:3857" minx="-278804.0743907743" miny="5145601.363401231" maxx="-79275.51812242913" maxy="5361001.318628748"/>
+        <BoundingBox CRS="EPSG:4230" minx="41.898376205495936" miny="-2.503327424335139" maxx="43.322378599099906" maxy="-0.7109405713310059"/>
+        <BoundingBox CRS="EPSG:4326" minx="41.89725646060256" miny="-2.5045396130002864" maxx="43.321272289907206" maxy="-0.712144095858722"/>
+        <BoundingBox CRS="EPSG:900913" minx="-278804.0743907743" miny="5145601.363401231" maxx="-79275.51812242913" maxy="5361001.318628748"/>
+        <BoundingBox CRS="EPSG:3038" minx="4938889.094696381" miny="2488124.982545893" maxx="5144970.216611569" maxy="2686665.480655382"/>
+        <BoundingBox CRS="EPSG:3039" minx="4807119.398019106" miny="2000826.1334203775" maxx="5000906.530357636" maxy="2186136.2165011107"/>
+        <BoundingBox CRS="EPSG:3040" minx="4714549.160759508" miny="1513591.337656639" maxx="4896724.820531376" maxy="1686433.908695207"/>
+        <BoundingBox CRS="EPSG:3041" minx="4658815.42449753" miny="1026733.6097259696" maxx="4829965.738681824" maxy="1187740.7002443695"/>
+        <BoundingBox CRS="EPSG:3042" minx="4638487.493891629" miny="540173.1477690564" maxx="4799034.318232126" maxy="689784.8168951604"/>
+        <BoundingBox CRS="EPSG:3043" minx="4645035.625180095" miny="43318.04480705743" maxx="4811226.795288311" maxy="198997.844338505"/>
+        <BoundingBox CRS="EPSG:3044" minx="4684222.716746671" miny="-454980.1554905147" maxx="4861219.566505181" maxy="-287696.1012631205"/>
+        <BoundingBox CRS="EPSG:3045" minx="4759468.441539435" miny="-954204.006406682" maxx="4947788.348234394" maxy="-774765.9680652551"/>
+        <BoundingBox CRS="EPSG:3046" minx="4872699.650210409" miny="-1454411.1430614349" maxx="5072990.099302606" maxy="-1262108.2624929226"/>
+        <BoundingBox CRS="EPSG:3047" minx="5026791.406615356" miny="-1955070.849439351" maxx="5239750.619090024" maxy="-1749102.0993348574"/>
+        <Attribution>
+          <Title>IDENA</Title>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://idena.navarra.es"/>
+        </Attribution>
+        <AuthorityURL name="SITNA">
+          <OnlineResource xlink:type="simple" xlink:href="http://idena.navarra.es"/>
+        </AuthorityURL>
+        <Identifier authority="SITNA">CP:CadastralParcel</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://idena.navarra.es/catalogo/gn/srv/spa/xml_iso19139?uuid=engSITNAINSPIRE_ES_RRTN_CP"/>
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/html</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://idena.navarra.es/catalogo/gn/srv/spa/search?uuid=engSITNAINSPIRE_ES_RRTN_CP"/>
+        </MetadataURL>
+        <MetadataURL type="ISO19115:2003">
+          <Format>text/plain</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://idena.navarra.es/ogc/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;ElementSetName=full&amp;ID=engSITNAINSPIRE_ES_RRTN_CP"/>
+        </MetadataURL>
+        <Style>
+          <Name>CP:CP.CadastralParcel.Default</Name>
+          <Title>Cadastral Parcel Default Style</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://inspire.navarra.es/services/CP/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CP%3ACadastralParcel"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>CP:CP.CadastralParcel.ELFCadastre</Name>
+          <Title>Cadastral Parcel ELF Default Style</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://inspire.navarra.es/services/CP/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CP%3ACadastralParcel&amp;style=CP.CadastralParcel.ELFCadastre"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>CP:CP.CadastralParcel.BoundariesOnly</Name>
+          <Title>Cadastral Parcel Boundaries Only Style</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://inspire.navarra.es/services/CP/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CP%3ACadastralParcel&amp;style=CP.CadastralParcel.BoundariesOnly"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>CP:CP.CadastralParcelRefencePointOnly</Name>
+          <Title>Cadastral Parcel Reference Point Only Style</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://inspire.navarra.es/services/CP/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CP%3ACadastralParcel&amp;style=CP.CadastralParcelRefencePointOnly"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>1.0</MinScaleDenominator>
+        <MaxScaleDenominator>60000.0</MaxScaleDenominator>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>
