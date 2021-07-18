@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>spike openlayers cesium</title>
-    <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
-    <script src="https://unpkg.com/elm-pep"></script>
-    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
-    <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=fetch,requestAnimationFrame,Element.prototype.classList,URL,TextDecoder,Number.isInteger"></script>
-    <style>
-      .map {
-        width: 100%;
-        height: 800px;
+<head>
+  <meta charset="utf-8">
+  <!-- Include the CesiumJS JavaScript and CSS files -->
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.83/Build/Cesium/Cesium.js"></script>
+  <link href="https://cesium.com/downloads/cesiumjs/releases/1.83/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="cesiumContainer"></div>
+
+  <script>
+
+    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI4M2JjNmM3MC0yYTEwLTQzZWMtOTAyMy0zOTM0NzcyYmJhYjAiLCJpZCI6NDE5NzksImlhdCI6MTYxMDgyNDQ4OX0.kh07NSEMH0M7FHh4NLH7g9jQlF0ZUbaqIFaZUyn3nVU';
+
+    // Initialize the Cesium Viewer in the HTML element with the `cesiumContainer` ID.
+    const viewer = new Cesium.Viewer('cesiumContainer', {
+      terrainProvider: Cesium.createWorldTerrain()
+    });    
+
+    // Fly the camera to Leitza at the given longitude, latitude, and height.
+    viewer.camera.flyTo({
+      destination : Cesium.Cartesian3.fromDegrees(-1.914610, 43.078789, 800),
+      orientation : {
+        heading : Cesium.Math.toRadians(0.0),
+        pitch : Cesium.Math.toRadians(-15.0),
       }
-    </style>
-  </head>
-  <body>
-    <div id="map" class="map"></div>
-    <script src="main.js"></script>
-  </body>
+    });
+
+  </script>
+
+ </div>
+
+</body>
 </html>
