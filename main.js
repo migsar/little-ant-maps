@@ -4,12 +4,19 @@ import OSM from 'ol/source/OSM';
 import TileLayer from 'ol/layer/Tile';
 import TileWMS from 'ol/source/TileWMS';
 import View from 'ol/View';
-//import OLCesium from 'olcs/OLCesium.js';  // todo: olcs import error
 
 
 // IDENA:cartografia_topografica_200000
 // IDENA:cartografia_topografica_100000
 // IDENA:ortofoto_maxima_actualidad
+const activeLayers = ['IDENA:ortofoto_maxima_actualidad', 
+                      'IDENA:CATAST_Pol_Municipio',
+                    //  'IDENA:BIODIV_Pol_ZPProtec',
+                      'IDENA:BIODIV_Pol_ZEPA',
+                    //  'IDENA:BIODIV_Pol_RN2000',
+                    //  'IDENA:BIODIV_Pol_ZPProtec',
+                    //  'IDENA:BIODIV_Pol_PaisajesPro'
+                    ]
 
 const layers = [
   new TileLayer({
@@ -18,7 +25,7 @@ const layers = [
   new TileLayer({
     source: new TileWMS({
       url: 'http://idena.navarra.es/ogc/ows?service=WMS',
-      params: {'LAYERS': 'IDENA:ortofoto_maxima_actualidad', 'TILED': true},
+      params: {'LAYERS':  activeLayers, 'TILED': true},
       serverType: 'geoserver',
       transition: 0
     }),
@@ -34,5 +41,7 @@ const map = new Map({
   }),
 });
 
-// const ol3d = new OLCesium({map: map}); // ol2dMap is the ol.Map instance
+// import OLCesium from 'olcs/OLCesium.js';  // todo: olcs import error
+// const amap = map
+// const ol3d = new OLCesium({map: amap}); // ol2dMap is the ol.Map instance
 // ol3d.setEnabled(true);
